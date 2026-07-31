@@ -22,6 +22,10 @@
                 --gray: #C9D1D9;
             }
 
+            html{
+                scroll-behavior: smooth;
+            }
+
             body{
                 background: var(--bg);
                 color: var(--text);
@@ -29,21 +33,49 @@
                 font-family: 'Poppins', sans-serif;
             }
 
-            header{
+            header {
                 height: 100dvh;
                 background:
-                    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.75)),
+                    linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.4)), 
                     url(img/hero.jpg);
 
-                background-size:cover;
-                background-position:center;
+                background-size: cover;
+                background-position: center;
+
+                color: var(--primary);
 
                 display: flex;
+                flex-direction: column;
                 text-align: center;
                 align-items: center;
                 justify-content: center;
+                position: relative;
 
                 gap: 10px;
+            }
+
+            .nav-bar {
+                position: absolute;
+                top: 30px;
+                display: flex;
+                gap: 15px;
+            }
+
+            .nav-bar button {
+                background: rgba(13, 39, 68, 0.8);
+                color: var(--text);
+                border: 2px solid var(--primary);
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+                font-weight: bold;
+                transition: 0.2s;
+            }
+
+            .nav-bar button:hover {
+                background: var(--primary);
+                transform: scale(1.05);
             }
 
             article{
@@ -57,7 +89,7 @@
                 height: auto;
             }
             .imagem-grande img{
-                max-width: 55%;
+                max-width: 60%;
                 height: auto;
             }
 
@@ -67,12 +99,12 @@
             }
 
             .texto{
-                max-width: 40%;
+                max-width: 35%;
                 height: auto;
             }
 
             .super-imagem{
-                max-width: 80%;
+                max-width: 70%;
                 height: 100dvh;
                 display: flex;
                 text-align: center;
@@ -108,13 +140,19 @@
 
 <body>
     <header>
+        <nav class="nav-bar">
+            <button onclick="location.href='#parte-1'">O que é</button>
+            <button onclick="location.href='#parte-2'">Como evitar</button>
+            <button onclick="location.href='#parte-3'">parte 3</button>
+        </nav>
+
         <div>
             <h1>Rios Mortos no Brasil</h1>
         </div>
     </header>
 
     <main>
-        <section class="imagem-grande">
+        <section id="parte-1" class="imagem-grande">
             <article>
                 <img src="primeira.jpg">
                 <div class="texto">
@@ -128,7 +166,7 @@
             </article>
         </section>
 
-        <section class="texto-grande">
+        <section id="parte-2" class="texto-grande">
             <article>
                 <img src="segunda.jpg">
                 <div class="texto">
@@ -142,7 +180,7 @@
             <img src="terceira.jpg">
         </section>
 
-        <section class="texto-grande">
+        <section id="parte-3" class="texto-grande">
             <article>
                 <img src="quarta.jpg">
                 <div class="texto">
@@ -151,7 +189,7 @@
             </article>
         </section>
 
-        <section class="imagem-grande">
+        <section id="parte-4" class="imagem-grande">
             <article>
                 <img src="quinta.jpg">
                 <div class="texto">
@@ -160,6 +198,10 @@
             </article>
         </section>
 
+        <footer>
+            <p> Projeto do IFA</p> do IFA
+            2026
+        </footer>
     </main>
 
 </body>
