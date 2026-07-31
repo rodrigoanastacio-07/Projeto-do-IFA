@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
@@ -7,135 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #071A2E;
+            --bg2: #0D2744;
+            --primary: #1F6FEB;
+            --secondary: #5BC0EB;
+            --text: #F8FAFC;
+            --gray: #C9D1D9;
+        }
 
-        <style>
-            :root{
-                --bg: #071A2E;
-                --bg2: #0D2744;
-                --primary: #1F6FEB;
-                --secondary: #5BC0EB;
-                --text: #F8FAFC;
-                --gray: #C9D1D9;
-            }
+        html {
+            scroll-behavior: smooth; /* Rolagem suave ao clicar nos botões */
+        }
 
-            html{
-                scroll-behavior: smooth;
-            }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Layout Lado a Lado (Imagem | Texto) */
+        header {
+            height: 100dvh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
 
-            body{
-                background: var(--bg);
-                color: var(--text);
-                margin: 0;
-                font-family: 'Poppins', sans-serif;
-            }
+        header img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+            border-right: 3px solid var(--primary); /* Linha divisória */
+        }
 
-            header {
-                height: 100dvh;
-                background:
-                    linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.4)), 
-                    url(img/hero.jpg);
+        header div {
+            width: 50%;
+            text-align: center;
+        }
 
-                background-size: cover;
-                background-position: center;
+        .nav-bar {
+            position: absolute;
+            top: 30px;
+            right: 12%; /* Alinha os botões do lado direito */
+            display: flex;
+            gap: 10px;
+        }
 
-                color: var(--primary);
+        .nav-bar button {
+            background: var(--bg2);
+            color: var(--text);
+            border: 1px solid var(--primary);
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
 
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-                position: relative;
+        /* Resto do Layout */
+        article {
+            display: flex;
+            gap: 30px;
+        }
 
-                gap: 10px;
-            }
+        article div {
+            max-width: 35%;
+            height: auto;
+        }
 
-            .nav-bar {
-                position: absolute;
-                top: 30px;
-                display: flex;
-                gap: 15px;
-            }
+        .imagem-grande img {
+            max-width: 55%;
+            height: auto;
+        }
 
-            .nav-bar button {
-                background: rgba(13, 39, 68, 0.8);
-                color: var(--text);
-                border: 2px solid var(--primary);
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                font-family: 'Poppins', sans-serif;
-                font-weight: bold;
-                transition: 0.2s;
-            }
+        .texto-grande div {
+            max-width: 60%;
+            height: auto;
+        }
 
-            .nav-bar button:hover {
-                background: var(--primary);
-                transform: scale(1.05);
-            }
+        .texto {
+            max-width: 40%;
+            height: auto;
+        }
 
-            article{
-                display: flex;
-                gap: 30px;
-            }
+        .super-imagem {
+            max-width: 80%;
+            height: 100dvh;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
 
+        section {
+            padding: 120px 10%;
+        }
 
-            article div{
-                max-width: 35%;
-                height: auto;
-            }
-            .imagem-grande img{
-                max-width: 60%;
-                height: auto;
-            }
+        section:nth-child(odd) article {
+            background: var(--bg);
+        }
 
-            .texto-grande div{
-                max-width: 60%;
-                height: auto;
-            }
+        section:nth-child(even) article {
+            background: var(--bg2);
+            flex-direction: row-reverse;
+        }
 
-            .texto{
-                max-width: 35%;
-                height: auto;
-            }
+        h1, h2 {
+            color: var(--text);
+        }
 
-            .super-imagem{
-                max-width: 70%;
-                height: 100dvh;
-                display: flex;
-                text-align: center;
-                align-items: center;
-                justify-content: center;
-            }
-
-            section{
-                padding:120px 10%;
-            }
-
-            section:nth-child(odd) article{
-                background: var(--bg);
-            }
-
-            section:nth-child(even) article{
-                background: var(--bg2);
-                flex-direction: row-reverse;
-            }
-
-            h1,h2{
-                color:var(--text);
-            }
-
-            h2{
-                border-left:5px solid var(--secondary);
-                padding-left:15px;
-            }
-
-        </style>
-
+        h2 {
+            border-left: 5px solid var(--secondary);
+            padding-left: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -146,22 +136,22 @@
             <button onclick="location.href='#parte-3'">parte 3</button>
         </nav>
 
+        <img src="img/hero.jpg" alt="Rios Mortos">
+
         <div>
             <h1>Rios Mortos no Brasil</h1>
         </div>
     </header>
 
     <main>
+        <!-- IDs adicionados nas seções para a navegação funcionar -->
         <section id="parte-1" class="imagem-grande">
             <article>
                 <img src="primeira.jpg">
                 <div class="texto">
                     <h2> O que são rios mortos: Exemplos no Brasil </h2>
-
                     <h3> Os rios mortos são rios que não podem ser consumidos por seres humanos ou animais, eles são causados pelo descarte incorreto de resíduos como plásticos, esgotos não tratados, resíduos químicos, etc.</h3>
-
-                    <p>Os rios mortos são um sério problema no Brasil e no mundo, suas principais características consistem em: não possuírem vida marinha (vegetal ou animal), não ser consumível para qualquer tipo de vida, não ser possível ver o fundo e ter um cheiro desagradável.
-                    No Brasil temos vários nomes reconhecidos como Rio Tietê em São Paulo, Rio Iguaçu no Paraná e Rio Amazônia no Amapá e Pará. Eles foram transformados em rios pois, no Rio Tietê é a décadas jogado esgoto doméstico e resíduos urbanos, no Rio Iguaçu sofre de acúmulo de carga orgânica e de produtos químicos, já no Rio Amazônia ele sofre de extração de minerais sem autorização do governo, que utilizam mercúrio e destroem margens.</p>
+                    <p>Os rios mortos são um sério problema no Brasil e no mundo, suas principais características consistem em: não possuírem vida marinha (vegetal ou animal), não ser consumível para qualquer tipo de vida, não ser possível ver o fundo e ter um cheiro desagradável. No Brasil temos vários nomes reconhecidos como Rio Tietê em São Paulo, Rio Iguaçu no Paraná e Rio Amazônia no Amapá e Pará. Eles foram transformados em rios pois, no Rio Tietê é a décadas jogado esgoto doméstico e resíduos urbanos, no Rio Iguaçu sofre de acúmulo de carga orgânica e de produtos químicos, já no Rio Amazônia ele sofre de extração de minerais sem autorização do governo, que utilizam mercúrio e destroem margens.</p>
                 </div>
             </article>
         </section>
@@ -171,7 +161,7 @@
                 <img src="segunda.jpg">
                 <div class="texto">
                     <h2> Como evitar os rios mortos</h2>
-<p>Evitar que os rios se tornem rios mortos, é necessário combater a poluição e adotar práticas que preservem o meio ambiente. O tratamento do esgoto doméstico e dos resíduos industriais é essencial para impedir a contaminação da água. Também é importante não jogar lixo, óleo ou produtos químicos nos rios e reduzir o uso excessivo de agrotóxicos, que podem ser levados pela chuva até os cursos d’água. A preservação da mata ciliar ajuda a proteger as margens, evitar a erosão, diminuir o assoreamento e manter a qualidade da água. Além disso, é importante promover campanhas de educação ambiental para conscientizar a população sobre a importância dos rios e incentivar atitudes sustentáveis no dia a dia. A fiscalização das leis ambientais e os projetos de recuperação de áreas degradadas também são fundamentais para preservar os rios, proteger a biodiversidade e garantir água de qualidade para as atuais e futuras gerações.</p>
+                    <p>Evitar que os rios se tornem rios mortos, é necessário combater a poluição e adotar práticas que preservem o meio ambiente. O tratamento do esgoto doméstico e dos resíduos industriais é essencial para impedir a contaminação da água. Também é importante não jogar lixo, óleo ou produtos químicos nos rios e reduzir o uso excessivo de agrotóxicos, que podem ser levados pela chuva até os cursos d’água. A preservação da mata ciliar ajuda a proteger as margens, evitar a erosão, diminuir o assoreamento e manter a qualidade da água. Além disso, é importante promover campanhas de educação ambiental para conscientizar a population sobre a importância dos rios e incentivar atitudes sustentáveis no dia a dia. A fiscalização das leis ambientais e os projetos de recuperação de áreas degradadas também são fundamentais para preservar os rios, proteger a biodiversidade e garantir água de qualidade para as atuais e futuras gerações.</p>
                 </div>
             </article>
         </section>
@@ -189,8 +179,8 @@
             </article>
         </section>
 
-        <section id="parte-4" class="imagem-grande">
-            <article>
+        <section class="imagem-grande">
+            <article class="parte-4">
                 <img src="quinta.jpg">
                 <div class="texto">
                     <p> pipipi popopo</p>
@@ -199,11 +189,9 @@
         </section>
 
         <footer>
-            <p> Projeto do IFA</p> do IFA
-            2026
+            <p>Projeto do IFA 2026</p>
         </footer>
     </main>
-
 </body>
 
 </html>
