@@ -49,17 +49,34 @@
             article{
                 display: flex;
                 gap: 30px;
-                border: 2px solid yellow;
             }
 
-            article img{
-                max-width: 45%;
+
+            article div{
+                max-width: 40%;
                 height: auto;
-                border: 2px solid red;
+            }
+            .imagem-grande img{
+                max-width: 60%;
+                height: auto;
+            }
+
+            .texto-grande div{
+                max-width: 65%;
+                height: auto;
             }
 
             .texto{
-                border: 2px solid cyan;
+                max-width: 45%;
+                height: auto;
+            }
+
+            .super-imagem{
+                height: 100dvh;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
             }
 
             section{
@@ -90,14 +107,13 @@
 
 <body>
     <header>
-        <img src="hero.jpg">
         <div>
             <h1>Rios Mortos no Brasil</h1>
         </div>
     </header>
 
     <main>
-        <section>
+        <section class="imagem-grande">
             <article>
                 <img src="primeira.jpg">
                 <div class="texto">
@@ -111,7 +127,7 @@
             </article>
         </section>
 
-        <section>
+        <section class="texto-grande">
             <article>
                 <img src="segunda.jpg">
                 <div class="texto">
@@ -121,18 +137,22 @@
             </article>
         </section>
 
-        <section>
+        <section class="super-imagem">
+            <img src="terceira.jpg">
+        </section>
+
+        <section class="texto-grande">
             <article>
-                <img src="terceira.jpg">
+                <img src="quarta.jpg">
                 <div class="texto">
                     <p> pipipi popopo</p>
                 </div>
             </article>
         </section>
 
-        <section>
+        <section class="imagem-grande">
             <article>
-                <img src="quarta.jpg">
+                <img src="quinta.jpg">
                 <div class="texto">
                     <p> pipipi popopo</p>
                 </div>
