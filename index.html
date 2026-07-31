@@ -6,15 +6,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto</title>
+
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 
         <style>
-		<body>
-			margin = 0;
-			font = Poppins;
-		</body>
+            :root{
+                --bg: #071A2E;
+                --bg2: #0D2744;
+                --primary: #1F6FEB;
+                --secondary: #5BC0EB;
+                --text: #F8FAFC;
+                --gray: #C9D1D9;
+            }
+
+            body{
+                background: var(--bg);
+                color: var(--text);
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            header{
+                height: 100dvh;
+                background:
+                    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.75)),
+                    url(img/hero.jpg);
+
+                background-size:cover;
+                background-position:center;
+
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+
+            article{
+                display: flex;
+            }
+            section{
+                padding:120px 10%;
+            }
+
+            section:nth-child(odd) article{
+                background: var(--bg);
+            }
+
+            section:nth-child(even) article{
+                background: var(--bg2);
+                flex-direction: row-reverse;
+            }
+
+            h1,h2{
+                color:var(--text);
+            }
+
+            h2{
+                border-left:5px solid var(--secondary);
+                padding-left:15px;
+            }
 
         </style>
 
@@ -22,17 +74,55 @@
 
 <body>
     <header>
-        <h1>Rios Mortos no Brasil</h1>
+        <div>
+            <h1>Rios Mortos no Brasil</h1>
+        </div>
     </header>
 
     <main>
+        <section>
+            <article>
+                <img src="primeira.jpg">
+                <div class="texto">
+                    <h2>    O que são rios mortos: Exemplos no Brasil </h2>
 
+                    <h3> Os rios mortos são rios que não podem ser consumidos por seres humanos ou animais, eles são causados pelo descarte incorreto de resíduos como plásticos, esgotos não tratados, resíduos químicos, etc.</h3>
+
+                    <p>Os rios mortos são um sério problema no Brasil e no mundo, suas principais características consistem em: não possuírem vida marinha (vegetal ou animal), não ser consumível para qualquer tipo de vida, não ser possível ver o fundo e ter um cheiro desagradável.
+                    No Brasil temos vários nomes reconhecidos como Rio Tietê em São Paulo, Rio Iguaçu no Paraná e Rio Amazônia no Amapá e Pará. Eles foram transformados em rios pois, no Rio Tietê é a décadas jogado esgoto doméstico e resíduos urbanos, no Rio Iguaçu sofre de acúmulo de carga orgânica e de produtos químicos, já no Rio Amazônia ele sofre de extração de minerais sem autorização do governo, que utilizam mercúrio e destroem margens.</p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <img src="segunda.jpg">
+                <div class="texto">
+                    <p> pipipi popopo</p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <img src="terceira.jpg">
+                <div class="texto">
+                    <p> pipipi popopo</p>
+                </div>
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <img src="quarta.jpg">
+                <div class="texto">
+                    <p> pipipi popopo</p>
+                </div>
+            </article>
+        </section>
 
     </main>
 
-    
 </body>
-
-</script>
 
 </html>
