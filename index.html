@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+<title>Projeto</title>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
 
     <style>
         :root {
@@ -21,7 +22,7 @@
         }
 
         html {
-            scroll-behavior: smooth; /* Rolagem suave ao clicar nos botões */
+            scroll-behavior: smooth; 
         }
 
         body {
@@ -31,7 +32,6 @@
             font-family: 'Poppins', sans-serif;
         }
         
-        /* Layout Lado a Lado (Imagem | Texto) */
         header {
             height: 100dvh;
             display: flex;
@@ -43,7 +43,7 @@
             width: 50%;
             height: 100%;
             object-fit: cover;
-            border-right: 3px solid var(--primary); /* Linha divisória */
+            border-right: 3px solid var(--primary); 
         }
 
         header div {
@@ -54,7 +54,7 @@
         .nav-bar {
             position: absolute;
             top: 30px;
-            right: 12%; /* Alinha os botões do lado direito */
+            right: 12%;
             display: flex;
             gap: 10px;
         }
@@ -69,7 +69,6 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Resto do Layout */
         article {
             display: flex;
             gap: 30px;
@@ -125,73 +124,91 @@
             border-left: 5px solid var(--secondary);
             padding-left: 15px;
         }
+    
+        footer{
+            text-align:center;
+            padding:40px;
+            background:var(--bg2);
+            margin-top:60px;
+        }
+
+        footer p{
+            margin:0;
+        }
+            
+        article img{
+            border-radius:10px;
+            object-fit:cover
+        }
+            
+        .super-imagem img{
+            max-width:100%;
+            max-height:90vh;
+            border-radius:12px;
+        }
     </style>
+
 </head>
 
-<body>
-    <header>
-        <nav class="nav-bar">
-            <button onclick="location.href='#parte-1'">O que é</button>
-            <button onclick="location.href='#parte-2'">Como evitar</button>
-            <button onclick="location.href='#parte-3'">parte 3</button>
-        </nav>
+    <body>
+        <header>
+            <nav class="nav-bar">
+                <button onclick="location.href='#parte-1'">O que é</button>
+                <button onclick="location.href='#parte-2'">Como evitar</button>
+                <button onclick="location.href='#parte-3'">Como resolver</button>
+                <button onclick="location.href='#parte-4'">Elementos químicos</button>
+            </nav>
 
-        <img src="img/hero.jpg" alt="Rios Mortos">
+            <img alt="Rios Mortos" src="img/hero.jpg"/>
 
-        <div>
-            <h1>Rios Mortos no Brasil</h1>
-        </div>
-    </header>
+            <div>
+                <h1>Rios Mortos no Brasil</h1>
+            </div>
+        </header>
 
-    <main>
-        <!-- IDs adicionados nas seções para a navegação funcionar -->
-        <section id="parte-1" class="imagem-grande">
-            <article>
-                <img src="primeira.jpg">
+        <main>
+            <section class="imagem-grande" id="parte-1">
+                <article>
+                <img src="primeira.jpg"/>
                 <div class="texto">
                     <h2> O que são rios mortos: Exemplos no Brasil </h2>
                     <h3> Os rios mortos são rios que não podem ser consumidos por seres humanos ou animais, eles são causados pelo descarte incorreto de resíduos como plásticos, esgotos não tratados, resíduos químicos, etc.</h3>
                     <p>Os rios mortos são um sério problema no Brasil e no mundo, suas principais características consistem em: não possuírem vida marinha (vegetal ou animal), não ser consumível para qualquer tipo de vida, não ser possível ver o fundo e ter um cheiro desagradável. No Brasil temos vários nomes reconhecidos como Rio Tietê em São Paulo, Rio Iguaçu no Paraná e Rio Amazônia no Amapá e Pará. Eles foram transformados em rios pois, no Rio Tietê é a décadas jogado esgoto doméstico e resíduos urbanos, no Rio Iguaçu sofre de acúmulo de carga orgânica e de produtos químicos, já no Rio Amazônia ele sofre de extração de minerais sem autorização do governo, que utilizam mercúrio e destroem margens.</p>
                 </div>
-            </article>
-        </section>
+                </article>
+            </section>
 
-        <section id="parte-2" class="texto-grande">
-            <article>
-                <img src="segunda.jpg">
-                <div class="texto">
-                    <h2> Como evitar os rios mortos</h2>
-                    <p>Evitar que os rios se tornem rios mortos, é necessário combater a poluição e adotar práticas que preservem o meio ambiente. O tratamento do esgoto doméstico e dos resíduos industriais é essencial para impedir a contaminação da água. Também é importante não jogar lixo, óleo ou produtos químicos nos rios e reduzir o uso excessivo de agrotóxicos, que podem ser levados pela chuva até os cursos d’água. A preservação da mata ciliar ajuda a proteger as margens, evitar a erosão, diminuir o assoreamento e manter a qualidade da água. Além disso, é importante promover campanhas de educação ambiental para conscientizar a population sobre a importância dos rios e incentivar atitudes sustentáveis no dia a dia. A fiscalização das leis ambientais e os projetos de recuperação de áreas degradadas também são fundamentais para preservar os rios, proteger a biodiversidade e garantir água de qualidade para as atuais e futuras gerações.</p>
-                </div>
-            </article>
-        </section>
+            <section class="texto-grande" id="parte-2">
+                <article>
+                    <img src="segunda.jpg"/>
+                    <div class="texto">
+                        <h2> Como evitar os rios mortos</h2>
+                        <p>Evitar que os rios se tornem rios mortos, é necessário combater a poluição e adotar práticas que preservem o meio ambiente. O tratamento do esgoto doméstico e dos resíduos industriais é essencial para impedir a contaminação da água. Também é importante não jogar lixo, óleo ou produtos químicos nos rios e reduzir o uso excessivo de agrotóxicos, que podem ser levados pela chuva até os cursos d’água. A preservação da mata ciliar ajuda a proteger as margens, evitar a erosão, diminuir o assoreamento e manter a qualidade da água. Além disso, é importante promover campanhas de educação ambiental para conscientizar a população sobre a importância dos rios e incentivar atitudes sustentáveis no dia a dia. A fiscalização das leis ambientais e os projetos de recuperação de áreas degradadas também são fundamentais para preservar os rios, proteger a biodiversidade e garantir água de qualidade para as atuais e futuras gerações.</p>
+                    </div>
+                </article>
+            </section>
 
-        <section class="super-imagem">
-            <img src="terceira.jpg">
-        </section>
+            <section class="super-imagem">
+                <img src="terceira.jpg"/>
+            </section>
 
-        <section id="parte-3" class="texto-grande">
-            <article>
-                <img src="quarta.jpg">
-                <div class="texto">
-                    <p> pipipi popopo</p>
-                </div>
-            </article>
-        </section>
+            <section class="texto-grande" id="parte-3">
+                <article>
+                    <img src="quarta.jpg"/>
+                    <div class="texto"><h2>Como resolver se o rio já estiver morto?</h2><p>Mesmo quando um rio já está muito poluído, é possível recuperar sua qualidade. Para isso, é necessário tratar o esgoto antes de ele chegar aos rios, controlar o descarte de lixo e produtos químicos, fiscalizar atividades poluidoras, retirar resíduos do rio, plantar árvores nas margens e proteger as nascentes. Com essas ações e o acompanhamento da qualidade da água, o rio pode voltar a abrigar plantas e animais.</p></div>
+                </article>
+            </section>
 
-        <section class="imagem-grande">
-            <article class="parte-4">
-                <img src="quinta.jpg">
-                <div class="texto">
-                    <p> pipipi popopo</p>
-                </div>
-            </article>
-        </section>
+            <section class="imagem-grande" id="parte-4">
+                <article class="parte-4">
+                    <img src="quinta.jpg"/>
+                    <div class="texto"><h2>Componentes tóxicos e fatores físicos</h2><p>Um curso de água é considerado morto quando o oxigênio dissolvido cai drasticamente ou toxinas impedem a sobrevivência de peixes, plantas e micro-organismos. Metais pesados como chumbo, mercúrio e cádmio envenenam a vida aquática. Agrotóxicos e fertilizantes causam eutrofização. Reações químicas industriais alteram a acidez da água. O assoreamento e a remoção da vegetação das margens elevam a temperatura da água e prejudicam o fluxo natural.</p></div>
+                </article>
+            </section>
 
-        <footer>
-            <p>Projeto do IFA 2026</p>
-        </footer>
-    </main>
-</body>
-
+            <footer>
+                <p>Projeto do IFA 2026</p>
+            </footer>
+        </main>
+    /body>
 </html>
