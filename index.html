@@ -1,154 +1,161 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
-<title>Projeto</title>
+        <title>Projeto</title>
 
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
 
-    <style>
-        :root {
-            --bg: #071A2E;
-            --bg2: #0D2744;
-            --primary: #1F6FEB;
-            --secondary: #5BC0EB;
-            --text: #F8FAFC;
-            --gray: #C9D1D9;
-        }
+        <style>
+            :root {
+                --bg: #071A2E;
+                --bg2: #0D2744;
+                --primary: #1F6FEB;
+                --secondary: #5BC0EB;
+                --text: #F8FAFC;
+                --gray: #C9D1D9;
+            }
 
-        html {
-            scroll-behavior: smooth; 
-        }
+            html {
+                scroll-behavior: smooth; 
+            }
 
-        body {
-            background: var(--bg);
-            color: var(--text);
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-        }
+            body {
+                background: var(--bg);
+                color: var(--text);
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            header {
+                height: 100dvh;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            header img {
+                width: 50%;
+                height: 100%;
+                object-fit: cover;
+                border-right: 3px solid var(--primary); 
+            }
+
+            header div {
+                width: 50%;
+                text-align: center;
+            }
+
+            .nav-bar {
+                position: absolute;
+                top: 30px;
+                right: 12%;
+                display: flex;
+                gap: 10px;
+            }
+
+            .nav-bar button {
+                background: var(--bg2);
+                color: var(--text);
+                border: 1px solid var(--primary);
+                padding: 8px 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            article{
+                display: flex;
+                gap: 30px;
+                align-items: center;
+            }
+
+            article img{
+                width: 50%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+
+            .texto{
+                width: 40%;
+            }
+
+            .imagem-grande img{
+                width: 60%;
+            }
+
+            .imagem-grande .texto{
+                width: 40%;
+            }
+
+            .texto-grande img{
+                width: 40%;
+            }
+
+            .texto-grande .texto{
+                width: 60%;
+            }
+            
+            .super-imagem {
+                max-width: 80%;
+                height: 100dvh;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+
+            section {
+                padding: 120px 10%;
+            }
+
+            section:nth-child(odd) article {
+                background: var(--bg);
+            }
+
+            section:nth-child(even) article {
+                background: var(--bg2);
+                flex-direction: row-reverse;
+            }
+
+            h1, h2 {
+                color: var(--text);
+            }
+
+            h2 {
+                border-left: 5px solid var(--secondary);
+                padding-left: 15px;
+            }
         
-        header {
-            height: 100dvh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
+            footer{
+                text-align:center;
+                padding:40px;
+                background:var(--bg2);
+                margin-top:60px;
+            }
 
-        header img {
-            width: 50%;
-            height: 100%;
-            object-fit: cover;
-            border-right: 3px solid var(--primary); 
-        }
+            footer p{
+                margin:0;
+            }
+                
+            article img{
+                border-radius:10px;
+                object-fit:cover
+            }
+                
+            .super-imagem img{
+                max-width:100%;
+                max-height:90vh;
+                border-radius:12px;
+            }
+        </style>
 
-        header div {
-            width: 50%;
-            text-align: center;
-        }
-
-        .nav-bar {
-            position: absolute;
-            top: 30px;
-            right: 12%;
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-bar button {
-            background: var(--bg2);
-            color: var(--text);
-            border: 1px solid var(--primary);
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        article {
-            display: flex;
-            gap: 30px;
-        }
-
-        article div {
-            max-width: 35%;
-            height: auto;
-        }
-
-        .imagem-grande img {
-            max-width: 55%;
-            height: auto;
-        }
-
-        .texto-grande div {
-            max-width: 60%;
-            height: auto;
-        }
-
-        .texto {
-            max-width: 40%;
-            height: auto;
-        }
-
-        .super-imagem {
-            max-width: 80%;
-            height: 100dvh;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        section {
-            padding: 120px 10%;
-        }
-
-        section:nth-child(odd) article {
-            background: var(--bg);
-        }
-
-        section:nth-child(even) article {
-            background: var(--bg2);
-            flex-direction: row-reverse;
-        }
-
-        h1, h2 {
-            color: var(--text);
-        }
-
-        h2 {
-            border-left: 5px solid var(--secondary);
-            padding-left: 15px;
-        }
-    
-        footer{
-            text-align:center;
-            padding:40px;
-            background:var(--bg2);
-            margin-top:60px;
-        }
-
-        footer p{
-            margin:0;
-        }
-            
-        article img{
-            border-radius:10px;
-            object-fit:cover
-        }
-            
-        .super-imagem img{
-            max-width:100%;
-            max-height:90vh;
-            border-radius:12px;
-        }
-    </style>
-
-</head>
+    </head>
 
     <body>
         <header>
@@ -159,7 +166,7 @@
                 <button onclick="location.href='#parte-4'">Elementos químicos</button>
             </nav>
 
-            <img alt="Rios Mortos" src="img/hero.jpg"/>
+            <img src="hero.jpg" alt="Rios Mortos" />
 
             <div>
                 <h1>Rios Mortos no Brasil</h1>
@@ -210,5 +217,5 @@
                 <p>Projeto do IFA 2026</p>
             </footer>
         </main>
-    /body>
+    </body>
 </html>
