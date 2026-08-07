@@ -212,6 +212,40 @@
                 padding-left:15px;
             }
 
+            .referencias{
+    padding:100px 10%;
+    background:var(--bg2);
+}
+
+.referencias h2{
+    margin-bottom:35px;
+}
+
+.referencias ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:18px;
+}
+
+            .referencias li{
+                background:rgba(255,255,255,.05);
+                border-left:4px solid var(--secondary);
+                border-radius:8px;
+
+                padding:18px 22px;
+
+                transition:.3s;
+            }
+
+            .referencias li:hover{
+                background:rgba(91,192,235,.15);
+                transform:translateX(8px);
+            }
+
             footer{
                 text-align:center;
                 padding:40px;
@@ -370,6 +404,25 @@
                     <div class="texto anim-left">
                         <h2>Componentes tóxicos e fatores físicos</h2><p>Um curso de água é considerado morto quando o oxigênio dissolvido cai drasticamente ou toxinas impedem a sobrevivência de peixes, plantas e micro-organismos. Metais pesados como chumbo, mercúrio e cádmio envenenam a vida aquática. Agrotóxicos e fertilizantes causam eutrofização. Reações químicas industriais alteram a acidez da água. O assoreamento e a remoção da vegetação das margens elevam a temperatura da água e prejudicam o fluxo natural.</p></div>
                 </article>
+            </section>
+
+            <section id="referencias" class="referencias">
+                <h2>Referências</h2>
+
+                <ul>
+                    <li><strong>Crônicas da Cidade</strong> — Artigos sobre rios urbanos.</li>
+                    <li><strong>ecycle</strong> — Conteúdo sobre meio ambiente.</li>
+                    <li><strong>gov.br</strong> — Dados e informações governamentais.</li>
+                    <li><strong>G1</strong> — Reportagens e notícias.</li>
+                    <li><strong>Gemini</strong> — Auxílio na organização das pesquisas.</li>
+                    <li><strong>Brasil Escola</strong> — Conteúdo educacional.</li>
+                    <li><strong>Toda Matéria</strong> — Material de apoio.</li>
+                    <li><strong>ANA</strong> — Agência Nacional de Águas e Saneamento Básico.</li>
+                    <li><strong>Weber Ambiental</strong> — Informações sobre recuperação ambiental.</li>
+                    <li><strong>Tera Ambiental</strong> — Tratamento e preservação ambiental.</li>
+                    <li><strong>BRK Ambiental</strong> — Saneamento e recursos hídricos.</li>
+                    <li><strong>SOS Mata Atlântica</strong> — Conservação dos rios brasileiros.</li>
+                </ul>
             </section>
 
             <footer>
