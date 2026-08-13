@@ -212,24 +212,45 @@
                 padding-left:15px;
             }
 
+            .video{
+                padding:100px 10%;
+                text-align:center;
+                background:var(--bg);
+            }
+
+            .video h2{
+                display:inline-block;
+                text-align:left;
+                margin-bottom:40px;
+            }
+
+            .video video{
+                display:block;
+                width:100%;
+                max-width:1000px;
+                margin:0 auto;
+                border-radius:12px;
+                box-shadow:0 10px 30px rgba(0,0,0,.3);
+            }
+
             .referencias{
-    padding:100px 10%;
-    background:var(--bg2);
-}
+                padding:100px 10%;
+                background:var(--bg2);
+            }
 
-.referencias h2{
-    margin-bottom:35px;
-}
+            .referencias h2{
+                margin-bottom:35px;
+            }
 
-.referencias ul{
-    list-style:none;
-    padding:0;
-    margin:0;
+            .referencias ul{
+                list-style:none;
+                padding:0;
+                margin:0;
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-    gap:18px;
-}
+                display:grid;
+                grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+                gap:18px;
+            }
 
             .referencias li{
                 background:rgba(255,255,255,.05);
@@ -409,6 +430,15 @@
                 </article>
             </section>
 
+            <section class="video">
+                <h2>Vídeo</h2>
+
+                <video controls>
+                    <source src="vid.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </section>
+
             <section id="referencias" class="referencias">
                 <h2>Referências</h2>
                 <ul>
@@ -435,7 +465,7 @@
                     <li><strong>Yashila Dantas de Oliveira N°30</strong> — Como resolver um rio que já se tornou morto.</li>
                     <li><strong>Kevin Nunes Martins de Souza N°18</strong> — Componentes tóxicos e fatores físicos.</li>
                     <li><strong>Rodrigo Anastacio Rodrigues N°25</strong> — Montagem do site.</li>
-                    <li><strong>Alice Müeller Serur Benatto N°2</strong> — Vídeo do site.</li>
+                    <li><strong>Alice Müller Serur Benato N°2</strong> — Vídeo do site.</li>
                 </ul>
             </section>
 
